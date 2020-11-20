@@ -1,0 +1,25 @@
+#include<stdio.h>
+#define MAX 10
+int main()
+{
+	int i = 0;
+	int target;
+	int nums[MAX];
+
+	printf("请输入数组值:");
+	while (i < MAX)
+	{
+		scanf_s("%d",&nums[i++]);
+	}
+
+	printf("请输入目标值:");
+	scanf_s("%d",&target);
+
+	for (i = 0; i < MAX; i++)
+	{
+		int cha = target - nums[i];
+		for (int j = i; j < MAX; j++)
+			if (cha == nums[j])
+				printf("下标为[%d,%d]\n",i,j);
+	}
+}
